@@ -32,9 +32,13 @@ nav{
     align-items: center;
     z-index: 10;
 }
+nav span{
+    color: red;
+}
 nav h1{
     font-size: 1.8rem;
     color: #fff;
+    text-transform: uppercase;
 }
 nav ul{
     list-style: none;
