@@ -1,29 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--nunito-sans);
+}
+:root{
+    --nunito-sans :  'Poppins', sans-serif;;
 }
 /* common styles */
 a{
     text-decoration: none;
     color: #fff;
 }
+.about h1,.our-playlists h1{
+    font-weight: 550;
+}
 /* common styles */
 
+
+/* Nav bar design */
 nav{
     width: 100%;
-    height: 6vh;
+    padding: 1rem 0;
     position: fixed;
     top: 0;
     left: 0;
     background-color: transparent;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+nav h1{
+    font-size: 1.8rem;
+    color: #fff;
 }
 nav ul{
     list-style: none;
     display: flex;
 }
+nav ul li{
+    margin: 0 0.5rem;
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+nav ul li:hover{
+    transform: scale(1.1);
+}
+nav ul .close{
+    display: none;
+}
+nav .burger{
+    display: none;
+}
+/* Nav bar design ends */
+
+/* Hero background */
 .bg{
     background-image: url('./images/herobg.jpg');
     background-size: cover;
@@ -32,4 +64,129 @@ nav ul{
     width: 100%;
     height: 100vh;
     box-shadow:inset 10000px 0 10px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.bg a {
+	background-color: #ea1313c4;
+	border-radius: 53px;
+	width: 10rem;
+	height: 2.5rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1rem;
+    margin-top: 0.7rem;
+    position: relative;
+    transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.bg a:hover{
+    background-color: #ea1313f0;
+}
+/* Hero bg ends */
+
+/* About section starts */
+.about-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #FBFAF5;
+    padding-top: 3rem;
+}
+.about{
+    text-align: center;
+    max-width: 1000px;
+    padding: 1rem;
+}
+.about p {
+    letter-spacing: 1.4px;
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+/* About section ends */
+
+/* Card section */
+.our-playlists{
+    background-color: #FBFAF5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+.card {
+	width: 14rem;
+	background-color: #FBFAF5;
+	border: 1px solid rgba(59, 59, 59, 0.2);
+	padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    color: #4e4e4e;
+    transition: all 0.3s ease-in-out;
+}
+.card:hover{
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1),-1px -1px 10px rgba(0,0,0,0.1);
+    border: 0px;
+}
+.card-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card h3{
+    margin: 1rem 0;
+    font-weight: 550;
+}
+.card p{
+    margin-bottom: 1rem;
+}
+.card-link{
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+}
+/* Card section */
+@media only screen and (max-width:546px){
+    nav ul{
+        flex-direction: column;
+        position: absolute;
+        background-color: rgba(0,0,0,0.9);
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        transform: translateX(100%);
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    nav ul li {
+        margin: 0 0.5rem;
+        transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        margin: 1rem 0;
+    }
+    nav ul .close{
+        color: white;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        display: block;
+    }
+    nav .burger{
+        display: block;
+        color: #fff;
+    }
+    .nav-active{
+        transform: translateX(0);
+    }
+    .bg h1, nav h1{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
 }

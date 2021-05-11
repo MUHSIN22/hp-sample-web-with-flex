@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Flex Website</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <h1>Hackphiles</h1>
-        <ul class="nav-items">
-            <a href="#"><li>Home</li></a>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Contents</li></a>
-            <a href="#"><li>Connect</li></a>
-        </ul>
+      <h1>Hackphiles</h1>
+      <ul class="nav-items">
+        <i class="fas fa-times close" onclick="navSlide()"></i>
+        <a href="#"><li>Home</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>Contents</li></a>
+        <a href="#"><li>Connect</li></a>
+      </ul>
+      <i class="fas fa-bars burger" onclick="navSlide()"></i>
     </nav>
-    <div class="bg">
-
-    </div>
-</body>
+    <main class="bg">
+      <h1>Welcome to Hackphiles</h1>
+      <p>This Website is only for learn flex.</p>
+      <a href="https://youtu.be/nsI15j1Qb5A"
+        >Get Started<i class="fas fa-play"></i
+      ></a>
+    </main>
+    <section class="about-container" id="about-container">
+      <div class="about">
+        <h1>Who is Hackphiles?</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+          debitis aut facere itaque expedita, odio vitae reiciendis enim alias
+          repudiandae nam velit tempore placeat saepe sunt laudantium ad
+          voluptatem. Alias.
+        </p>
+      </div>
+    </section>
+    <section class="our-playlists">
+        <h1>Our Playlists</h1>
+        <div class="card-container">
+            <div class="card">
+                <h3>Selenium Python</h3>
+                <p>Selenium is a powerful tool for controlling web browsers through programs and performing browser automation.</p>
+                <a href="#" class="card-link">View Playlist</a>
+            </div>
+            <div class="card">
+                <h3>Basic coding</h3>
+                <p>In this tutorial we are using C++ to teach coding basics. You can learn basics of coding easily from this playlist.</p>
+                <a href="#" class="card-link">View Playlist</a>
+            </div>
+            <div class="card">
+                <h3>Python</h3>
+                <p>In this tutorial we are include most of the stuffs in python. You can learn python easily from this playlist.</p>
+                <a href="#" class="card-link">View Playlist</a>
+            </div>
+        </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
 </html>
