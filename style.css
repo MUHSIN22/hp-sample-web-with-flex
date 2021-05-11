@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* common styles */
+a{
+    text-decoration: none;
+    color: #fff;
+}
+/* common styles */
+
+nav{
+    width: 100%;
+    height: 6vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+.bg{
+    background-image: url('./images/herobg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    box-shadow:inset 10000px 0 10px rgba(0,0,0,0.5);
+}
